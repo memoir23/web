@@ -1,0 +1,97 @@
+.icon {
+
+    width: 2em;
+    height: 2em;
+    border: solid 0.5em;
+    cursor: pointer;
+    margin: 5em 0 5em 5em;
+
+    clear: left;
+}
+
+.icon:hover, .icon:active{
+
+    color: white;
+    background-color: black;
+
+}
+
+.element {
+    width: 100%;
+
+}
+
+.thumbnail {
+    float: left;
+    top: -10em;
+    background-color: #EEE  ;
+    clear: right;
+    margin-left: 9em;
+    border: none;
+    position: relative;
+    padding: 20px;
+    width: 35%;
+}
+
+
+
+.name,
+.date {
+
+    margin: 0;
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.date {
+    font-size: 14px;
+    font-weight: 200;
+}
+
+.price {
+    background-color: #0cc ;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 50%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.4);
+    font-weight: 200;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    width: 80px;
+    position: absolute;
+    top: -50px;
+    right: -30px;
+}
+
+.rating {
+    text-align: right;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    margin: 30px 0 -30px 20px;
+}
+
+.likes {
+    background: #ccc ;
+    color: #0cc;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    line-height: 40px;
+    min-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0 -30px 0 40px;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background 500ms;
+}
+
+
+.likes:hover {
+    color: #0cc ;
+    background: black;
+    transition: background 500ms;
+}

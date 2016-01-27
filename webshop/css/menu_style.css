@@ -1,0 +1,89 @@
+.panel ul,
+.panel li,
+.panel a {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+.panel{
+    margin-left: 80px;
+}
+
+p.sep{
+    vertical-align: middle;
+    display: inline-block;
+    height: 10px;
+    min-width: 10px;
+    border-radius: 5px;
+    background-color: #0CC;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+.panel > li,
+span{
+    display: inline-block;
+    font-size: 1.5em;
+    margin-bottom: 1em;
+}
+
+
+
+ ul {
+     margin:0;
+    list-style: none;
+}
+ ul li {
+    display: inline-block;
+    float: left;
+    margin: 0;
+}
+
+
+ ul li:hover:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+}
+
+
+.has-sub {
+    z-index: 1;
+}
+
+.has-sub ul {
+    display: none;
+    position: absolute;
+    width: 120px;
+    top: 100%;
+    left: -10px;
+}
+.has-sub:hover ul {
+    display: block;
+}
+.has-sub ul li {
+    margin-bottom: -1px;
+}
+.has-sub ul li {
+    background: #0cc;
+    font-size: 11px;
+    filter: none;
+    display: block;
+    width: 100%;
+    padding: 10px 10px 0 10px;
+    color: #ffffff;
+}
+ .has-sub ul li:hover{
+    background: black;
+     color: #0cc
+}
+
+.has-sub ul li:first-child{
+    margin-top: 15px;
+}

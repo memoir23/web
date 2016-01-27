@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang='hu'>
+<head>
+<meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
+
+<title>Portfolio</title>
+
+<link rel='stylesheet' href='style2.css' type='text/css' />
+
+
+ <script type = "text/javascript">
+ 
+          var images = [], x = -1;
+ 
+ 
+          function displayNextImage() {
+              x = (x === images.length - 1) ? 0 : x + 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function displayPreviousImage() {
+              x = (x <= 0) ? images.length - 1 : x - 1;
+              document.getElementById("img").src = images[x];
+          }
+
+          function startTimer() {
+              setInterval(displayNextImage, 8000);
+          }
+
+          images[0] = "src2/0/fav0.jpg";
+          images[1] = "src2/0/fav1.jpg";
+          images[2] = "src2/0/fav2.jpg";
+		  
+		  
+		  function getAll0(){
+		  images = [];
+		  images[0] = "src2/0/fav0.jpg";
+          images[1] = "src2/0/fav1.jpg";
+          images[2] = "src2/0/fav2.jpg";
+		  }
+		  function getAll2(){
+		  images = [];
+		  images[0] = "src2/2/0.jpg";
+          images[1] = "src2/2/1.jpg";
+		  }
+		  function getAll1(){
+		  images = [];
+		  images[0] = "src2/1/0.jpg";
+          images[1] = "src2/1/2.jpg";
+		  }
+		  
+		  
+		  
+		  
+      </script>
+
+</head>
+
+<body onload = "startTimer()">
+<div id='infobox' class='infobox' style="display: none;"><p>Budapest 1082 Üllői út 66/B fsz 4<br />
+Mobile. +36 30 1112 070 / Studio. +36 20 312 5598<br />
+Email. <script language="JavaScript" type="text/javascript">
+					<!--
+						var string1 = "lee.john";
+						var string2 = "@";
+						var string3 = "gmail.com";
+						var string4 = string1 + string2 + string3;
+						document.write("<a href=" + "mail" + "to:" + string1 +
+							string2 + string3 + ">" + string4 + "</a>");
+					//-->
+					</script></p>
+
+<p></p></div>
+<div class="header">
+<a class=' active' href='/'><strong>Lee John</strong></a>
+<p id='info' onClick="swap()" style="cursor: pointer;">Info</p>
+</div>
+
+
+<div class="section-menu shoplink bigbottommargin bigtopmargin"><a class="active" href="/index.php?/print-sales/"><strong></strong></a></div>
+
+
+<div class='section-menu shoplink bigbottommargin bigtopmargin'><a class='active' href='/index.php?'><strong></strong></a></div>
+
+
+<div class='container'>
+<div id='column1' class='columns hvr-up' style='float:left;'>
+<div class='ucase'>Projects 1</div>
+<div class='col'>
+<a  style='display:block;' href='' onclick="do_click();">Selected New Work</a>
+<a  style='display:block;' href='' onclick="do_click();">Pitney Peking</a>
+<a  style='display:block;' href='' onclick="do_click();">Royal Mail</a>
+<a  style='display:block;' href='' onclick="do_click();">Millenium</a>
+</div>
+</div>
+
+<div id='column2' class='columns hvr-up' style='float:left;'>
+<div class='ucase' >Wallpapers</div>
+<div class='col'>
+<a  style='display:block;' onmousedown="changeText(this);getAll0();" onmouseout="this.style.color= '#5d5d5d'">Grey </a>
+<a  style='display:block;' onmousedown="changeText(this);getAll1();" onmouseout="this.style.color= '#5d5d5d'">Blue</a>
+<a  style='display:block;' onmousedown="changeText(this);getAll2();" onmouseout="this.style.color= '#5d5d5d'">Yellow</a>
+
+</div>
+
+</div>
+
+<div id='column3' class='columns hvr-up' style='float:left;'>
+<div class='ucase' >Projects 3</div>
+<div class='col'>
+
+
+</div>
+</div>
+
+<div id='column4' class='columns hvr-up' style='float:left;'>
+<div class='ucase' >Projects 4</div>
+<div class='col'>
+<a  style='display:block;' href='' onclick="do_click();">Edward Fields</a>
+<a  style='display:block;' href='' onclick="do_click();">Begg Pines</a>
+<a  style='display:block;' href='' onclick="do_click();">T S Edward</a>
+<a  style='display:block;' href='' onclick="do_click();">Rosewood Joe</a>
+
+
+
+</div>	
+</div>	
+<div id='column5' class='columns hvr-up' style='float:left;'>
+<div class='ucase' >Archive 1</div>
+<div class='col' >
+<a  style='display:block;' href='' onclick="do_click();">Sculptures</a>
+<a  style='display:block;' href='' onclick="do_click();">Interiors</a>
+<a  style='display:block;' href='' onclick="do_click();">Exteriors</a>
+<a  style='display:block;' href='' onclick="do_click();">Construction</a>
+<a  style='display:block;' href='' onclick="do_click();">Industrial</a>
+</div>
+</div>
+
+
+
+<div id='column6' class='columns hvr-up last' style='float:left;'>
+<div class='ucase'>Archive 2</div>
+<div class='col'>
+<a  style='display:block;' href='' onclick="do_click();">Music</a>
+<a  style='display:block;' href='' onclick="do_click();">Sci-Tech</a>
+</div>
+</div>
+
+
+
+
+<div class='Image'>
+ <a href="" class="Previous"></a>
+ 
+<img id="img"  src='src2/0/fav0.jpg' alt='' width='100%' style=' min-width: 400px;' />
+   <img class= "Next" src='src2/button.png' onclick="displayNextImage()" alt='' width='30px' style="cursor: pointer;"/>
+   <img class= "Previous" src='src2/button.png' onclick="displayPreviousImage()" alt='' width='30px' style="cursor: pointer;"/>
+</div>
+<div class="footer">
+
+
+&copy;2014 Lee M John, Budapest
+</div>
+
+
+</div>
+
+
+
+<script>
+
+
+
+function changeText(id){
+id.style.color = "#fce21c";
+}
+
+var infoOpen = false;
+  function swap() {
+  	
+  	if(infoOpen) {
+		document.getElementById('infobox').style.display = 'none';
+  	} else {
+		document.getElementById('infobox').style.display = 'block';		
+  	}
+  	infoOpen = !infoOpen; }	
+ 		
+</script>
+
+
+</body>
+</html>

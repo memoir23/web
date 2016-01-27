@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:orderBy="http://www.w3.org/1999/xhtml">
+<head>
+    <title>HLights webShop </title>
+
+    <link rel='stylesheet' type='text/css' href='css/element.css'/>
+    <link rel='stylesheet' type='text/css' href='css/main.css'/>
+    <link rel='stylesheet' type='text/css' href='css/menu_style.css'/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+    <script src="js/elementController.js"></script>
+
+</head>
+<body  ng-app="myApp">
+
+<div class="header">
+    <a class="logo" href=".">HL</a><p class="title">  | Height Lights</p>
+</div>
+<div ng-controller="ElementController">
+<div class="panel">
+    <li id="order" class="active has-sub">Order By
+        <ul>
+
+            <li  ng-class="{'active': order=='update'}"  ng-click="setOrder('update')"><span>update Time</span></li>
+            <li  ng-class="{'active': order=='price'}" ng-click="setOrder('price')"><span >price</span></li>
+            <li  ng-class="{'active': order=='title'}" ng-click="setOrder('title')" ><span>title</span></li>
+        </ul>
+        </li>
+    <p class="sep"></p><li id="buy">Buy</li>
+    <p class="sep"></p><li id="contact" class="has-sub">Contact
+    <ul>
+        <li class='active'><span>facebook</span></li>
+        <li class='active'><span>email</span></li>
+        <li class='active'><span>contancts</span></li>
+    </ul>
+</li>
+    <p class="sep"></p><li id="about" class="last">About</li>
+</div>
+
+<div class="container">
+    <div data-ng-repeat="product in products | orderBy:order" class="element">
+        <div class="icon"></div>
+        <div class="thumbnail">
+
+            <p class="name">{{ product.name }}</p>
+            <p class="price">{{ product.price | currency }}</p>
+            <p class="date">{{ product.update | date }}</p>
+            <div class="rating">
+                <p class="likes" ng-click="plusOne($index)">{{ product.likes }} </p>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+<div class="bigPic">
+    <p id="price">asd</p>
+    <p id="name">adfsdaf</p>
+</div>
+<script src="js/element.js"></script>
+</body>
+</html>
